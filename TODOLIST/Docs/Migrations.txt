@@ -1,0 +1,5 @@
+﻿Enable-Migrations -ContextTypeName DatabaseContext -MigrationsDirectory Migrations\Database
+
+add-migration -ConfigurationTypeName TODOLIST.Migrations.Database.Configuration "InitialCreate"
+
+update-database -ConfigurationTypeName TODOLIST.Migrations.Database.Configuration

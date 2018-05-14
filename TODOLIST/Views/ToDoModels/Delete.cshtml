@@ -1,0 +1,46 @@
+﻿@model TODOLIST.Models.ToDoModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+<h1>ToDo List Application</h1>
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsCompleted)
+        </dt>
+
+        <dd>
+            @Html.EditorFor(model => model.IsCompleted)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Item)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Item)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Priority)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Priority)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+    <div class="form-actions no-color">
+        <a href="/ToDoModels/Index" class="btn btn-primary" role="button">Cancel</a>
+        <input type="submit" value="Delete" class="btn btn-danger" />
+    </div>
+    }
+</div>
