@@ -18,7 +18,7 @@ namespace TODOLIST.Controllers
             return View();
         }
 
-        // POST: ToDoModels/Create To protect from overposting attacks, please enable the specific properties you want to bind to, for more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: ToDoModels/Create 
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Id,IsCompleted,Item,Priority")] ToDoModel toDoModel)
@@ -104,7 +104,7 @@ namespace TODOLIST.Controllers
             return View(toDoModel);
         }
 
-        // POST: ToDoModels/Edit/5 To protect from overposting attacks, please enable the specific properties you want to bind to, for more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: ToDoModels/Edit/5 
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "Id,IsCompleted,Item,Priority")] ToDoModel toDoModel)
